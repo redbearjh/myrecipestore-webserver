@@ -1,0 +1,47 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+               </ul>
+            </div>
+        </div>
+    
+        <div class="row row-content">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <p class="navbar-btn">
+                            <a ng-click="openSearch()" class="btn btn-default">Search for Recipes!</a>
+                        </p>
+                    </li>
+                </ul>
+            <div class="col-xs-12 col-sm-9">
+                <h2>Recipes</h2>
+               <ul class="media-list">
+                <li class="media" ng-repeat="recipe in recipes">
+                    <div class="media-left media-middle ">
+                        <a ui-sref="app.recipedetails({id: recipe._id})">
+                        <img class="media-object img-thumbnail"
+                        ng-src={{recipe.image}} alt="Recipe">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{recipe.name}}</h3>
+                        <p>{{recipe.description}}</p>
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+             <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+            </div>
+       </div>
+
+    </div>
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">My Recipes</li>
+               </ul>
+            </div>
+        </div>
+    
+        <div class="row row-content">
+
+            <div class="col-xs-12 col-sm-9">
+                <ul class="nav navbar-nav navbar-right">
+                    <button type="button" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Add Recipe" ng-click="addRecipe()">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp;
+                    </button>                    
+                </ul>
+                <h2>Recipes</h2>
+               <ul class="media-list">
+                <li class="media" ng-repeat="recipe in recipes" style="border:1px solid black">
+                    
+                <ul class="nav navbar-nav">
+                    <li>
+                        <button type="button" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Delete Recipe" ng-click="deleteRecipe(recipe._id)">
+                            <span class="glyphicon glyphicon-trash"></span>&nbsp;
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Edit Recipe">
+                            <span class="glyphicon glyphicon-edit"></span>&nbsp;
+                        </button>
+                    </li>
+                </ul>
+                    <div class="media-left media-middle ">
+                        <a ui-sref="app.recipedetails({id: recipe._id})">
+                        <img class="media-object img-thumbnail"
+                        ng-src={{recipe.image}} alt="Recipe">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{recipe.name}}</h3>
+                        <p>{{recipe.description}}</p>
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+             <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+            </div>
+       </div>
+
+    </div>
+
+
+
+
+
+
+
