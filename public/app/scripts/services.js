@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myrecipestoreApp')
-.constant("baseURL","https://myrecipestore-api.herokuapp.com//")
+.constant("baseURL","https://myrecipestore-api.herokuapp.com/")
 
 .factory('recipeFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
