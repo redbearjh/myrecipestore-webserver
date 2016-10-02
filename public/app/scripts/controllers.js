@@ -41,7 +41,7 @@ angular.module('myrecipestoreApp')
 
 // implement the IndexController and About Controller here
 
-.controller('HomeController', ['$scope', 'ngDialog', 'recipeFactory', function ($scope, ngDialog, recipeFactory) {
+.controller('HomeController', ['$scope', '$state', 'ngDialog', 'recipeFactory', function ($scope, $state, ngDialog, recipeFactory) {
         
     $scope.openSearch = function () {
         ngDialog.open({ template: 'views/search.html', scope: $scope, className: 'ngdialog-theme-default', controller:"SearchController" });
@@ -136,6 +136,12 @@ angular.module('myrecipestoreApp')
     
 }])
 
+.controller('SearchController', ['$scope', 'ngDialog',  function ($scope, ngDialog) {
+
+	$scope.searchinfo = '';
+   // Add code for returning search results
+   
+}]) 
 
 
 .controller('newRecipeController', ['$scope', 'ngDialog',  function ($scope, ngDialog) {
